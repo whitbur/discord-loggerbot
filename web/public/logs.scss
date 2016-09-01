@@ -1,0 +1,40 @@
+
+.navbar {
+  input {
+    width: 500px !important;
+  }
+}
+
+.message-div {
+  height: 600px;
+  overflow-y: auto;
+
+  .message-table {
+    width: 100%;
+  
+    tr {
+      margin-top: 3px;
+  
+      td {
+        &.time {
+          white-space: nowrap;
+          padding-right: 15px;
+
+          font-size: 0.8em;
+          color: #888;
+        }
+  
+        &.nickname {
+          white-space: nowrap;
+          text-align: right;
+          padding-right: 15px;
+          font-weight: bold;
+        }
+  
+        &.text {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

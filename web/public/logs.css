@@ -1,0 +1,24 @@
+.navbar input {
+  width: 500px !important; }
+
+.message-div {
+  height: 600px;
+  overflow-y: auto; }
+  .message-div .message-table {
+    width: 100%; }
+    .message-div .message-table tr {
+      margin-top: 3px; }
+      .message-div .message-table tr td.time {
+        white-space: nowrap;
+        padding-right: 15px;
+        font-size: 0.8em;
+        color: #888; }
+      .message-div .message-table tr td.nickname {
+        white-space: nowrap;
+        text-align: right;
+        padding-right: 15px;
+        font-weight: bold; }
+      .message-div .message-table tr td.text {
+        width: 100%; }
+
+/*# sourceMappingURL=logs.css.map */
