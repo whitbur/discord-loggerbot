@@ -36,7 +36,7 @@
         $scope.search("*");
         $http.get('/channels')
             .then(function(successData) {
-                $scope.channels = ["All Channels"].concat(successData.data);
+                $scope.channels = ["All Channels"].concat(successData.data.sort());
             }, function(errorData) {
                 alert(JSON.stringify(errorData));
             });

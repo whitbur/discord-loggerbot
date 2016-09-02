@@ -22,7 +22,7 @@ web:
   mem_limit: 50m
   image: loggerbot
   ports:
-    - 80:80
+    - 5600:80
   volumes:
     - ./web:/app
   environment:

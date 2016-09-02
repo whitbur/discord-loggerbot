@@ -18,7 +18,7 @@
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Filter" autofocus="autofocus" ng-model="queryString"/>
         </div>
-        <button type="submit" class="btn btn-default" ng-click="search();">Submit</button>
+        <button type="submit" class="btn btn-default" ng-click="search();">Go</button>
       </form>
     </nav>
     <div class="container">
@@ -36,7 +36,7 @@
 		    <table class="message-table">
 		      <tr ng-repeat="message in messages">
 		        <td class="time">{{message.timestamp | date : 'short'}}</td>
-		        <td class="nickname" title="{{message.username}}#{{message.discriminator}}">{{message.nickname ? message.nickname : message.username+'#'+message.discriminator}}</td>
+		        <td class="nickname" title="{{message.username}}#{{message.discriminator}}">{{message.nickname ? message.nickname : message.username}}</td>
 		        <td class="text">{{message.text}}</td>
 		      </tr>
             </table>
