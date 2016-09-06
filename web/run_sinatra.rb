@@ -31,6 +31,6 @@ post '/query' do
 end
 
 get '/channels' do
-  response = Unirest.post url+'/discord/message/_search', parameters:{query:{exists:{ field:'server'}},aggs:{message:{terms:{field: 'channel'}}}}.to_json
+  response = Unirest.post url+'/discord/message/_search', parameters:{query:{exists:{ field:'server'}},aggs:{message:{terms:{field:'channel',size:30}}}}.to_json
   response.body['aggregations']['message']['buckets'].map{|b| b['key']}.to_json
 end
