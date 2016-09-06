@@ -21,6 +21,9 @@
         padding-right: 15px;
         font-weight: bold; }
       .message-div .message-table tr td.text {
-        width: 100%; }
+        width: 100%;
+        white-space: pre-line;
+        word-break: break-all;
+        word-break: break-word; }
 
 /*# sourceMappingURL=logs.css.map */
