@@ -1,3 +1,4 @@
 esdata/
 **/.sass-cache
 *.swp
+.token

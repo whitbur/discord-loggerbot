@@ -1,12 +1,26 @@
 #!/usr/bin/env ruby
 
 require 'json'
+require 'yaml'
 require 'unirest'
 require 'discordrb'
 
 url = ENV['ELASTICSEARCH_URL'] || 'http://localhost:9200'
 
-bot = Discordrb::Bot.new token: '#REDACTED#', application_id: #REDACTED#
+creds = {}
+if File.exists? './.token'
+  creds = YAML::load_file('./.token')
+else
+  puts 'Looks like this is your first time running Loggerbot. Please input your applicationId and token below:'
+  print 'Application ID: '
+  creds['application_id'] = gets.strip.to_i
+  print 'Token: '
+  creds['token'] = gets.strip
+
+  File.open('./.token', 'w') {|f| f.write creds.to_yaml}
+end
+
+bot = Discordrb::Bot.new token: creds['token'], application_id: creds['application_id']
 
 bot.message() do |event|
     scrub_mentions(bot, event)
