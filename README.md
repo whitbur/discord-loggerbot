@@ -1,6 +1,8 @@
 # discord-loggerbot
 A ready to run docker-compose application that logs discord chat into elasticsearch and surfaces a website to search them.
 
+**Note:** This repository was built before Discord offered their own (very powerful) search functionality. You likely don't need this, but feel free to fork/reference in case you're building something similar.
+
 ## Setup
 ### You'll need:
   1. **A server to run this on.** It can be virtual, I use [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox) for mine. Whichever platform you choose, make sure it can run [Docker](https://www.docker.com/) and that it's got at least 256MB of free memory. This may even work using Docker for windows, although I haven't tested it.
